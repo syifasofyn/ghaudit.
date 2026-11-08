@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ghaudit"
+version = "0.1.0"
+description = "Audit keamanan GitHub Actions workflow"
+requires-python = ">=3.9"
+dependencies = ["pyyaml"]
+
+[project.scripts]
+ghaudit = "ghaudit.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"] 
